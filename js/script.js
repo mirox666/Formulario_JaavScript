@@ -46,3 +46,29 @@ email.addEventListener('keyup',()=>{
     }
     
 })
+
+/*HABILITAR VISUALIZAÇÃO DA SENHA*/
+
+let senha = document.querySelector("#senha")
+let iconeOlho = document.querySelector("#senha + span")//ESTOU PEGANDO A TAG SPAN EXATAMENTE APOS A TAG QUE POSSUI UM ID="SENHA"
+
+iconeOlho.addEventListener("click",()=>{
+    //console.log(iconeOlho)
+    if(iconeOlho.textContent == "visibility"){
+        iconeOlho.textContent = "visibility_off"
+        senha.setAttribute("type","password")
+    }
+    else{
+        iconeOlho.textContent = "visibility"
+        senha.setAttribute("type","text")
+
+    }
+})
+
+/*PEGANDO INFORMAÇÕES DO RADIO */
+let escolaridade = document.querySelectorAll("input[name=escolaridade]")
+let btnEscolaridade = document.querySelector("btnEscolaridade")
+
+btnEscolaridade.addEventListener("click",()=>{
+    console.log(escolaridade)
+})
