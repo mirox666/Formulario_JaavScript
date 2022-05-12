@@ -67,8 +67,38 @@ iconeOlho.addEventListener("click",()=>{
 
 /*PEGANDO INFORMAÇÕES DO RADIO */
 let escolaridade = document.querySelectorAll("input[name=escolaridade]")
-let btnEscolaridade = document.querySelector("btnEscolaridade")
+let btnEscolaridade = document.querySelector("#btnEscolaridade")
 
-btnEscolaridade.addEventListener("click",()=>{
-    console.log(escolaridade)
+btnEscolaridade.addEventListener("click",(evento)=>{
+    evento.preventDefault()//impedindo o botão de executar o comportamento padrão
+    //console.log(escolaridade)
+    let contador = 0
+    for(elementos of escolaridade){
+        if(elementos.checked){
+            alert(`Sua escolaridade é ${elementos.value}`)
+        }
+        else{
+            contador++
+        }
+    }
+    if(contador == 3){
+        alert(`Por favor escolha alguma escolaridade`)
+    }
+})
+
+/*EXIBINDO TERMOS DO CONTRATO*/
+let contrato = document.querySelector("#contrato")
+let escolha = document.querySelector("#escolha")
+contrato.classList.add("d-none")
+escolha.addEventListener("change", ()=>{
+    console.log(escolha.checked)
+    if(escolha.checked){
+        contrato.classList.remove("d-none")
+        contrato.classList.add("d-block")
+    }
+    else{
+        contrato.classList.remove("d-block")
+        contrato.classList.add("d-none")
+
+    }
 })
