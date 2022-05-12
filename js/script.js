@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //alert("Olá Mundo!")
 /*console.error("Se você é front-ender, vai me encontrar!")*/
 
@@ -17,11 +18,32 @@ function validarCampo(){
 }
 
 /* INSERIR ENDEREÇO EM CAMPO SOMENTE LEITURA */
+=======
+//alert("Olá, mundo!")
+/*console.error("Se você é Front-end irá encontrar-me")*/
+
+let nome = document.querySelector("#nome")
+nome.addEventListener('keyup',validarCampos)
+
+function validarCampos(){
+    //console.log(nome.value)
+    if(nome.value == ""){
+        nome.classList.remove("border-success")
+        nome.classList.add("border","border-danger")
+    }
+    else{
+        nome.classList.remove("border-danger")
+        nome.classList.add("border","border-success")
+    }
+}
+/* INSERIR INDEREÇO EM CAMPO SOMENTE LEITURA*/
+>>>>>>> 125a371f38794b773743bad42ecc8ac9f3e455ab
 let endereco = document.querySelector("#endereco")
 let leitura = document.querySelector("input[readonly]")
 
 endereco.addEventListener("keyup",function(){
     leitura.value = endereco.value
+<<<<<<< HEAD
 })
 
 /* VALIDAR EMAIL */
@@ -101,4 +123,6 @@ escolha.addEventListener("change", ()=>{
         contrato.classList.add("d-none")
 
     }
+=======
+>>>>>>> 125a371f38794b773743bad42ecc8ac9f3e455ab
 })
